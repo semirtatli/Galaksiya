@@ -2,39 +2,23 @@
 
 ---
 
-## Description
-
----
-
-## Technologies
-
----
-
-- Java
-- Spring Boot
-- Maven
-- PostgreSQL
-- JDBC
-- Junit
-- Mockito
-
 ## Installation
 
 ---
 
-1. [Clone Repository Link](https://github.com/ilknuruysal/staj2023backend.git)
+1. [Clone Repository Link](https://github.com/semirtatli/Galaksiya.git)
 
-2. Maven ile dependency'leri indir
+2. Download dependency with Maven
 
-3. Postgre Serverini kurup application.properties'ten konfigurasyonunu yap
+3. Setup Postgre Server and configure with application.properties
 
 ## Setup
 
-1. `src/main/resources/application.properties` icindeki database'i kur
+1. Setup database inside `src/main/resources/application.properties`
 
-2. Projeyi calistir
+2. Executt
 
-Proje `http://localhost:8080` uzerinde calısır.
+Project runs on `http://localhost:8080`
 
 ## API Endpoints
 
@@ -46,7 +30,7 @@ Proje `http://localhost:8080` uzerinde calısır.
 
 - #### POST /api/1.0/users
 
-  _Yeni bir kullanici olusturur_
+  _Create new user_
 
 ```
   {
@@ -69,7 +53,7 @@ Proje `http://localhost:8080` uzerinde calısır.
 
 - #### GET /api/1.0/users
 
-  _Tum kullanicilari listeler_
+  _List all users_
 
 **Response**
 
@@ -102,7 +86,7 @@ Proje `http://localhost:8080` uzerinde calısır.
 
 - #### GET getUserById - /api/1.0/users/{id}
 
-  _Id ile spesifik bir kullaniciyi listeler_
+  _List a user with id_
 
 `/api/1.0/users/1`
 
@@ -121,7 +105,7 @@ Proje `http://localhost:8080` uzerinde calısır.
 
 - #### PATCH updateUserById - /api/1.0/users/{id}
 
-  _Bir kullaniciyi gunceller_
+  _Update a user_
 
 `/api/1.0/users/52`
 
@@ -148,7 +132,7 @@ Proje `http://localhost:8080` uzerinde calısır.
 
 - #### DELETE deleteUserById - /api/1.0/users/{id}
 
-  _Bir kullaniciyi siler_
+  _Delete a user_
 
 `/api/1.0/users/52`
 
@@ -160,7 +144,7 @@ Proje `http://localhost:8080` uzerinde calısır.
 
 - #### POST createCategory - /api/category
 
-  _Bir kategori olusturur_
+  _Create a category_
 
 ```
 {
@@ -181,7 +165,7 @@ Proje `http://localhost:8080` uzerinde calısır.
 
 - #### GET getAllCategories - /api/category
 
-  _Tum kategorileri listeler_
+  _List all categories_
 
 **Response**
 
@@ -193,7 +177,7 @@ Proje `http://localhost:8080` uzerinde calısır.
     },
     {
         "id": 3,
-        "categoryName": "Telefon"
+        "categoryName": "Phone"
     },
     {
         "id": 52,
@@ -206,7 +190,7 @@ Proje `http://localhost:8080` uzerinde calısır.
 
 - #### DELETE deleteCategoryById - /api/category/{id}
 
-  _Bir kategoriyi siler_
+  _Deletes a category_
 
 `/api/category/52`
 
@@ -218,14 +202,14 @@ Proje `http://localhost:8080` uzerinde calısır.
 
 - #### POST createProduct - /api/products
 
-  _Bir urun olusturur_
+  _Creates a produst_
 
 ```
 {
-    "productName": "LaptopUrunu",
+    "productName": "LaptopProduct",
     "productPrice": 42.500,
     "productCategoryID": 1,
-    "productColor": "Gri",
+    "productColor": "Grey",
     "productStock": 25
 }
 ```
@@ -242,7 +226,7 @@ Proje `http://localhost:8080` uzerinde calısır.
 
 - #### GET getAllProducts - /api/products
 
-  _Tum urunleri listeler_
+  _Lists all products_
 
 **Response**
 
@@ -250,26 +234,26 @@ Proje `http://localhost:8080` uzerinde calısır.
 [
     {
         "id": 1,
-        "productName": "IyiLaptop",
+        "productName": "GoodLaptop",
         "productCategoryID": 1,
         "productPrice": 21065.00,
-        "productColor": "Kırmızı",
+        "productColor": "Red",
         "productStock": 118
     },
     {
         "id": 2,
-        "productName": "efsaneharikalaptop",
+        "productName": "VeryGoodlaptop",
         "productCategoryID": 3,
         "productPrice": 860.90,
-        "productColor": "Bemmbeyaz",
+        "productColor": "White",
         "productStock": 1
     },
     {
         "id": 52,
-        "productName": "LaptopUrunu",
+        "productName": "LaptopProduct",
         "productCategoryID": 1,
         "productPrice": 42.50,
-        "productColor": "Gri",
+        "productColor": "Grey",
         "productStock": 25
     }
 ]
@@ -279,7 +263,7 @@ Proje `http://localhost:8080` uzerinde calısır.
 
 - #### GET getProductByCategory - /api/products/byCategory/{ProductCategoryID}
 
-  _Urunleri kategoriye gore filtreleyerek listeler_
+  _Filter products by category and list_
 
 `/api/products/byCategory/1`
 
@@ -289,18 +273,18 @@ Proje `http://localhost:8080` uzerinde calısır.
 [
     {
         "id": 1,
-        "productName": "IyiLaptop",
+        "productName": "GoodLaptop",
         "productCategoryID": 1,
         "productPrice": 21065.00,
-        "productColor": "Kırmızı",
+        "productColor": "Red",
         "productStock": 118
     },
     {
         "id": 52,
-        "productName": "LaptopUrunu",
+        "productName": "LaptopProduct",
         "productCategoryID": 1,
         "productPrice": 42.50,
-        "productColor": "Gri",
+        "productColor": "Grey",
         "productStock": 25
     }
 ]
@@ -310,7 +294,7 @@ Proje `http://localhost:8080` uzerinde calısır.
 
 - #### GET getProductById - /api/products/{id}"
 
-  _Bir urunu listeler_
+  _List a product_
 
 `/api/products/52`
 
@@ -319,10 +303,10 @@ Proje `http://localhost:8080` uzerinde calısır.
 ```
 {
     "id": 52,
-    "productName": "LaptopUrunu",
+    "productName": "LaptopProduct",
     "productCategoryID": 1,
     "productPrice": 42.50,
-    "productColor": "Gri",
+    "productColor": "Grey",
     "productStock": 25
 }
 ```
@@ -331,16 +315,16 @@ Proje `http://localhost:8080` uzerinde calısır.
 
 - #### PUT updateProductById - /api/products/{id}
 
-  _Bir urunu gunceller_
+  _Update a product_
 
 `/api/products/52`
 
 ```
 {
-    "productName": "LaptopUrunu",
+    "productName": "LaptopProduct",
     "productPrice": 45.000,
     "productCategoryID": 1,
-    "productColor": "Beyaz",
+    "productColor": "White",
     "productStock": 40
 }
 ```
@@ -350,10 +334,10 @@ Proje `http://localhost:8080` uzerinde calısır.
 ```
 {
     "id": 52,
-    "productName": "LaptopUrunu",
+    "productName": "LaptopProduct",
     "productCategoryID": 1,
     "productPrice": 45.000,
-    "productColor": "Beyaz",
+    "productColor": "White",
     "productStock": 40
 }
 ```
@@ -362,7 +346,7 @@ Proje `http://localhost:8080` uzerinde calısır.
 
 - #### DELETE deleteProductByID - /api/products/{id}
 
-  _Bir urunu siler_
+  _Lists a product_
 
 `/api/products/52`
 
@@ -374,7 +358,7 @@ Proje `http://localhost:8080` uzerinde calısır.
 
 - #### POST createOrder - /api/orders
 
-  _Bir siparis olusturur_
+  _Creates a product_
 
 ```
   {
@@ -435,7 +419,7 @@ Proje `http://localhost:8080` uzerinde calısır.
 
 - #### GET getAllSelling - /api/orders
 
-  _Tum siparisleri listeler_
+  _Lists all orders_
 
 **Response**
 

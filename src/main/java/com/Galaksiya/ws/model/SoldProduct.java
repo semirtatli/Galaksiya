@@ -15,7 +15,6 @@ public class SoldProduct {
 
     private Long numberOfProduct;
 
-    // Other fields and getters/setters
 
     @ManyToOne
     private Selling selling;

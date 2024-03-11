@@ -1,5 +1,5 @@
 package com.Galaksiya.ws.model;
-//ProductId yi ozel yaptigimiz icin ayri bir class olustur
+//ProductId is special so it needs its own class
 public class ProductID {
 
     private final String id;

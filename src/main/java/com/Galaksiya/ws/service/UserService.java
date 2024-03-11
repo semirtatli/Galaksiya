@@ -10,22 +10,18 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import java.util.List;
 import java.util.Optional;
 
-//Servis classını @Service annotationuyla belirtiyoruz
-//UserRepository deki data için encapsulation sağlıyor
+
+//Encapsulation for userRepository
 @Service
 public class UserService {
-    //UserRepository icindeki metodlara UserService uzerinden erismek icin dependency injection
+    //dependency injection to reach methods at UserRepository from UserService
     @Autowired
     UserRepository userRepository;
 
 
     PasswordEncoder passwordEncoder;
 
-
-    //UserRepository icindeki metodlara UserService uzerinden erismek icin metodlar
-
-//Kullanıcının şifresi database'de yalın şekilde duruyor
-//password Encoder ile password encode edilerek databasade tutuluyor
+//password Encoder encodes password to hold in database
 
 
     public UserService(UserRepository userRepository) {

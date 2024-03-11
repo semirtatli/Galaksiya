@@ -7,10 +7,10 @@ import jakarta.validation.ConstraintValidatorContext;
 import org.springframework.beans.factory.annotation.Autowired;
 
 public class UniqueUsernameValidator implements ConstraintValidator<UniqueUsername, String> {
-//otomatik dependency injection
+// dependency injection
     @Autowired
 UserRepository userRepository;
-//girilen username kullanılıyorsa isValid false döndürüyor
+//if userName is used turn isValid
     @Override
     public boolean isValid(String username, ConstraintValidatorContext context) {
         if(userRepository!=null){

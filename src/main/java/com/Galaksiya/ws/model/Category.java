@@ -8,16 +8,12 @@ import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 
-//Lombok kutuphanesi annotationu
+
 @Data
 @AllArgsConstructor
-//Database'de CATEGORY tablosu oluşturmak için kullanılan annotation
 @Entity
 public class Category {
-//  CATEGORY tablosunun primary key ini id olarak belirlemek için kullanılan annotation
     @Id
-//  id yi sistemin üretip güncellemesi için kullanılan annotation
-//  diger variableler columnlar
     @GeneratedValue
     private Long id;
     @NotBlank

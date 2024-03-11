@@ -12,11 +12,9 @@ import java.util.Optional;
 //ProductRepository deki data için encapsulation sağlıyor
 @Service
 public class ProductService {
-    //ProductRepository icindeki metodlara ProductService uzerinden erismek icin dependency injection
     @Autowired
     ProductRepository productRepository;
 
-    //ProductRepository icindeki metodlara ProductService uzerinden erismek icin metodlar
     public ProductService(ProductRepository productRepository) {
         this.productRepository = productRepository;
     }

@@ -9,15 +9,11 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.Optional;
 
-//Servis classını @Service annotationuyla belirtiyoruz
-//SellingRepository deki data için encapsulation sağlıyor
 @Service
 public class SoldProductService {
-    //SellingRepository icindeki metodlara SellingService uzerinden erismek icin dependency injection
     @Autowired
     SoldProductRepository soldProductRepository;
 
-    //SellingRepository icindeki metodlara SellingService uzerinden erismek icin metodlar
     public void save(SoldProduct soldProduct) {soldProductRepository.save(soldProduct);}
     public List<SoldProduct> findAll(){
         return soldProductRepository.findAll();

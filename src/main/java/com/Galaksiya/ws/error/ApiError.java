@@ -4,20 +4,19 @@ import lombok.Data;
 
 import java.util.Date;
 import java.util.Map;
-//Lombok kütüphanesi
+
 @Data
-//@JsonInclude(JsonInclude.Include.NON_NULL)
+
 public class ApiError {
-//Dönülecek HTTP response'larını, mesajları ve url yi tutan fieldlar
-//    @JsonView(Views.Base.class)
+
     private int status;
-//    @JsonView(Views.Base.class)
+
     private String message;
-//    @JsonView(Views.Base.class)
+
     private String path;
-//    @JsonView(Views.Base.class)
+
     private long timestamp = new Date().getTime();
-//apierror map ediliyor ve message olarak gosterilmek icin iletiliyor
+//apierror is mapped and send to show as an error
     private Map<String, String> validationErrors;
 
     public ApiError(int status, String message, String path) {
