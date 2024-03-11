@@ -8,9 +8,9 @@
 		<version>3.1.1</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.staj2023backend</groupId>
+	<groupId>com.Galaksiya</groupId>
 	<artifactId>ws</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.1-snapshot</version>
 	<name>ws</name>
 	<description>ws</description>
 	<properties>

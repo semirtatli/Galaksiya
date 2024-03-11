@@ -1,26 +1,27 @@
-# STAJ2023_backend
-2023 stajyerler java projesi
+# Galaksiya Intern Project
 
 ---
 
 ## Description
----
 
-Market Takip Sisteminin backend kismi. Kullanici kaydi yapilip kayitli kullanici ile giris yapilabilir.
-<br>Admin kategori ekleyip silebilir, urun ekleyebilir, guncelleyebilir, silebilir. Yapilan satislari goruntuleyebilir.
+---
 
 ## Technologies
+
 ---
-* Java
-* Spring Boot
-* Maven
-* PostgreSQL
-* JDBC
-* Junit
-* Mockito
+
+- Java
+- Spring Boot
+- Maven
+- PostgreSQL
+- JDBC
+- Junit
+- Mockito
 
 ## Installation
+
 ---
+
 1. [Clone Repository Link](https://github.com/ilknuruysal/staj2023backend.git)
 
 2. Maven ile dependency'leri indir
@@ -36,12 +37,16 @@ Market Takip Sisteminin backend kismi. Kullanici kaydi yapilip kayitli kullanici
 Proje `http://localhost:8080` uzerinde calısır.
 
 ## API Endpoints
----
-### REQUESTS
-**Request**
-* #### POST  /api/1.0/users
 
-  *Yeni bir kullanici olusturur*
+---
+
+### REQUESTS
+
+**Request**
+
+- #### POST /api/1.0/users
+
+  _Yeni bir kullanici olusturur_
 
 ```
   {
@@ -61,9 +66,10 @@ Proje `http://localhost:8080` uzerinde calısır.
 ```
 
 **Request**
-* #### GET /api/1.0/users
 
-  *Tum kullanicilari listeler*
+- #### GET /api/1.0/users
+
+  _Tum kullanicilari listeler_
 
 **Response**
 
@@ -75,14 +81,14 @@ Proje `http://localhost:8080` uzerinde calısır.
         "displayName": "admin",
         "password": "$2a$10$A6t4weBxcGMBe7Wl1aNttOi/z3GpuxhVNK9trgJF6Zd8xod2TVYmG"
     },
-    
+
     {
         "id": 2,
         "username": "username",
         "displayName": "username",
         "password": "$2a$10$4ffg1s3CorG8Pyku01jhdO33/OXcXfogCOvA0zbhw/fergaMAqp82"
     },
-    
+
     {
         "id": 52,
         "username": "username8",
@@ -93,9 +99,10 @@ Proje `http://localhost:8080` uzerinde calısır.
 ```
 
 **Request**
-* #### GET getUserById - /api/1.0/users/{id}
 
-  *Id ile spesifik bir kullaniciyi listeler*
+- #### GET getUserById - /api/1.0/users/{id}
+
+  _Id ile spesifik bir kullaniciyi listeler_
 
 `/api/1.0/users/1`
 
@@ -111,9 +118,10 @@ Proje `http://localhost:8080` uzerinde calısır.
 ```
 
 **Request**
-* #### PATCH updateUserById - /api/1.0/users/{id}
 
-  *Bir kullaniciyi gunceller*
+- #### PATCH updateUserById - /api/1.0/users/{id}
+
+  _Bir kullaniciyi gunceller_
 
 `/api/1.0/users/52`
 
@@ -126,6 +134,7 @@ Proje `http://localhost:8080` uzerinde calısır.
 ```
 
 **Response**
+
 ```
 {
     "id": 52,
@@ -134,10 +143,12 @@ Proje `http://localhost:8080` uzerinde calısır.
     "password": "$2a$10$EZhGmGL7aU.3J8/92rEJW.sPXPZwUmG3ubUw3NsHowGcshiOYHyqO"
 }
 ```
-**Request**
-* #### DELETE deleteUserById - /api/1.0/users/{id}
 
-  *Bir kullaniciyi siler*
+**Request**
+
+- #### DELETE deleteUserById - /api/1.0/users/{id}
+
+  _Bir kullaniciyi siler_
 
 `/api/1.0/users/52`
 
@@ -146,9 +157,10 @@ Proje `http://localhost:8080` uzerinde calısır.
 ` `
 
 **Request**
-* #### POST createCategory - /api/category
 
-  *Bir kategori olusturur*
+- #### POST createCategory - /api/category
+
+  _Bir kategori olusturur_
 
 ```
 {
@@ -166,9 +178,10 @@ Proje `http://localhost:8080` uzerinde calısır.
 ```
 
 **Request**
-* #### GET getAllCategories - /api/category
 
-  *Tum kategorileri listeler*
+- #### GET getAllCategories - /api/category
+
+  _Tum kategorileri listeler_
 
 **Response**
 
@@ -190,9 +203,10 @@ Proje `http://localhost:8080` uzerinde calısır.
 ```
 
 **Request**
-* #### DELETE deleteCategoryById - /api/category/{id}
 
-  *Bir kategoriyi siler*
+- #### DELETE deleteCategoryById - /api/category/{id}
+
+  _Bir kategoriyi siler_
 
 `/api/category/52`
 
@@ -201,9 +215,10 @@ Proje `http://localhost:8080` uzerinde calısır.
 ` `
 
 **Request**
-* #### POST createProduct - /api/products
 
-  *Bir urun olusturur*
+- #### POST createProduct - /api/products
+
+  _Bir urun olusturur_
 
 ```
 {
@@ -224,9 +239,10 @@ Proje `http://localhost:8080` uzerinde calısır.
 ```
 
 **Request**
-* #### GET getAllProducts - /api/products
 
-  *Tum urunleri listeler*
+- #### GET getAllProducts - /api/products
+
+  _Tum urunleri listeler_
 
 **Response**
 
@@ -260,9 +276,10 @@ Proje `http://localhost:8080` uzerinde calısır.
 ```
 
 **Request**
-* #### GET getProductByCategory - /api/products/byCategory/{ProductCategoryID}
 
-  *Urunleri kategoriye gore filtreleyerek listeler*
+- #### GET getProductByCategory - /api/products/byCategory/{ProductCategoryID}
+
+  _Urunleri kategoriye gore filtreleyerek listeler_
 
 `/api/products/byCategory/1`
 
@@ -290,9 +307,10 @@ Proje `http://localhost:8080` uzerinde calısır.
 ```
 
 **Request**
-* #### GET getProductById - /api/products/{id}"
 
-  *Bir urunu listeler*
+- #### GET getProductById - /api/products/{id}"
+
+  _Bir urunu listeler_
 
 `/api/products/52`
 
@@ -310,9 +328,10 @@ Proje `http://localhost:8080` uzerinde calısır.
 ```
 
 **Request**
-* #### PUT updateProductById - /api/products/{id}
 
-  *Bir urunu gunceller*
+- #### PUT updateProductById - /api/products/{id}
+
+  _Bir urunu gunceller_
 
 `/api/products/52`
 
@@ -340,9 +359,10 @@ Proje `http://localhost:8080` uzerinde calısır.
 ```
 
 **Request**
-* #### DELETE deleteProductByID - /api/products/{id}
 
-  *Bir urunu siler*
+- #### DELETE deleteProductByID - /api/products/{id}
+
+  _Bir urunu siler_
 
 `/api/products/52`
 
@@ -351,9 +371,10 @@ Proje `http://localhost:8080` uzerinde calısır.
 ` `
 
 **Request**
-* #### POST createOrder - /api/orders
 
-  *Bir siparis olusturur*
+- #### POST createOrder - /api/orders
+
+  _Bir siparis olusturur_
 
 ```
   {
@@ -411,9 +432,10 @@ Proje `http://localhost:8080` uzerinde calısır.
 ```
 
 **Request**
-* #### GET getAllSelling - /api/orders
 
-  *Tum siparisleri listeler*
+- #### GET getAllSelling - /api/orders
+
+  _Tum siparisleri listeler_
 
 **Response**
 
@@ -425,4 +447,3 @@ Proje `http://localhost:8080` uzerinde calısır.
     }
 ]
 ```
-
